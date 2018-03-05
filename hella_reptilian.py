@@ -9,7 +9,7 @@ Bootstrap(app)
 app.config['DEBUG'] = True
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://frwarqgpoagzfk:1739020739f0fabf22d558773024fbf2ea9738941d8082fe216bc5cf030971fd@ec2-54-204-46-60.compute-1.amazonaws.com:5432/d7igmaohp1q70m'
 
-SECRET_KEY = os.environ['flask-secret-key']
+#sECRET_KEY = os.environ['flask-secret-key']
 app.config.from_object(__name__)
 db = SQLAlchemy(app)
 
