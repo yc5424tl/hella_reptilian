@@ -1,3 +1,5 @@
+from sqlalchemy import UniqueConstraint
+
 from manage import db, app
 
 
@@ -41,6 +43,7 @@ class Merch(db.Model):
 class Sales(db.Model):
 
     __tablename__ = 'sales'
+    __table_args__ = (UniqueConstraint('show_id', 'merch_id', 'merch_name', name='sales_table_unique_constraint_show-id_merch-id_merch-name'),)
 
     sales_id = db.Column(db.Integer, primary_key=True)
     show_id = db.Column(db.Integer, db.ForeignKey('shows.show_id'), nullable=False)
