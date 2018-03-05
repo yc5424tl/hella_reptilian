@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block title %}merch_table{% endblock %}
+
+{% block header %}{{ super() }}{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='merch_table_script.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+
+    <div class="row align-columns-center">
+        <div class="col-md-2 col-sm-1"></div>
+        <div class="col-md-8 col-sm-10" id="merch_table_div">
+            <table class="table table-dark table-bordered" id="merch_table">
+                <thead>
+                    <tr>
+                        <th>item</th>
+                        <th>cost</th>
+                        <th>descr</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                        <tr>
+                            <td>{{ item.merch_name }}</td>
+                            <td>{{ item.merch_cost }}</td>
+                            <td>{{ item.merch_descr }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <form class="form"  action="{{ url_for('merch_table') }}" method="post">
+                <div class="form-group">
+                    <div id="merch_form_buttons" class="btn-group special form-group" data-toggle="buttons">
+                        <label class="btn control-label">
+                            <input type="radio" name="actions" value='add' id="add_merch_radio" class="form-control act">add_merch
+                        </label>
+                        <label class="btn control-label">
+                            <input type="radio" name="actions" value='upd' id="edit_merch_radio" class="form-control act">edit_table
+                        </label>
+                        <label class="btn control-label">
+                            <input type="radio" name="actions" value='del' id="remove_merch_radio" class="form-control act">remove_merch
+                        </label>
+                    </div>
+                    <fieldset class="form-group">
+                        <div class="form-group row">
+                            <div class="col-lg-3 col-md-12">
+                                <div class="form-group row">
+                                    <label class="col-6 col-form-label control-label" for="merch_name_input">merch_name</label>
+                                    <div class="col-6">
+                                        <input type="text" id="merch_name_input" name="merch_name" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-12">
+                                <div class="form-group row">
+                                    <label class="col-6 col-form-label control-label" for="merch_cost_input">merch_cost</label>
+                                    <div class="col-6">
+                                        <input type="number" id="merch_cost_input" name="merch_cost" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-12">
+                                <div class="form-group row">
+                                    <label class="col-6 col-form-label control-label" for="merch_descr_input">merch_descr</label>
+                                    <div class="col-6">
+                                        <input type="text" id="merch_descr_input" name="merch_descr" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-12">
+                                <button type="submit" class="btn" id="merch_submit">press_record</button>
+                            </div>
+                            <div class="form-group hidden">
+                                <label class='control-label' for="merch_orig_name"></label>
+                                <input type="text" id="merch_orig_name" name="merch_orig_name" class="form-control">
+                            </div>
+                            <div class="form-group hidden">
+                                <label class='control-label' for="merch_orig_cost"></label>
+                                <input type="number" id="merch_orig_cost" name="merch_orig_cost" class="form-control">
+                            </div>
+                            <div class="form-group hidden">
+                                <label class='control-label' for="merch_orig_descr"></label>
+                                <input type="text" id="merch_orig_descr" name="merch_orig_descr" class="form-control">
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-2 col-sm-1"></div>
+    </div>
+
+    {% for message in get_flashed_messages() %}
+        <p class="flashed_message">{{ message }}</p>
+    {% endfor %}
+
+{% endblock %}

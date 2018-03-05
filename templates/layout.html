@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% block head %}
+
+        <title>Hella Reptilian! {% block title %}{% endblock %}</title>
+
+        {% block metas %}
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% endblock %}
+
+        {% block styles %}
+            <link href="{{ bootstrap_find_resource('css/bootstrap.css', cdn='bootstrap') }}" rel="stylesheet">
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+            <link href="https://fonts.googleapis.com/css?family=Aldrich|Cutive+Mono|Electrolize|Fredericka+the+Great|Iceland|Orbitron|Rokkitt" rel="stylesheet">
+            <link rel="stylesheet" href="{{ url_for('.static', filename='layout_style.css') }}">
+        {% endblock %}
+
+        {% block scripts %}
+             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        {% endblock %}
+
+    {% endblock %}
+</head>
+
+<body class="body">
+    <div class="content">
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#layoutNavBar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{{ url_for('home') }}">Hella Reptilian!</a>
+                </div>
+                <div class="collapse navbar-collapse" id="layoutNavBar">
+                    <ul class="nav navbar-nav">
+                        <li class="{% if active=='home' %}nav-item active{% else %}nav-item{% endif %}">
+                            <a class="nav-link" id="link-home" href="{{ url_for('home') }}">[     home_page     ]</a></li>
+                        <li class="{% if active=='tour_dates' %}nav-item active{% else %}nav-item{% endif %}">
+                            <a class="nav-link" id="link-tour-dates" href="{{ url_for('tour_dates')}}">[     tour_dates     ]</a></li>
+                        <li class="{% if active=='add_merch' %}nav-item active{% else %}nav-item{% endif %}">
+                            <a class="nav-link" id="link-merch" href="{{ url_for('merch_table') }}">[      merch_table      ]</a></li>
+                        <li class="{% if active=='sales' %}nav-item active{% else %}nav-item{% endif %}">
+                            <a class="nav-link" id="link-sales" href="{{ url_for('sales') }}">[     sales_report     ]</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <img class="img-fluid" id="banner_image" src="{{ url_for('static', filename='img/IMG_A.jpg') }}">
+
+        {% block content %}
+        {% endblock %}
+
+    </div>
+
+    {% block footer %}
+                <footer class="footer pull-right">
+                    <div id="footer-div" class="container pull-right">
+                        <p class="footer-block pull-right">Jacob Boline 2018
+                            <a href="https://github.com/yc5424tl/band-tour-app.git">this.github</a>
+                        </p>
+                    </div>
+                </footer>
+    {% endblock %}
+
+</body>
+</html>

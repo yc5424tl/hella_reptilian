@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+{% block title %}sales{% endblock %}
+
+{% block head %}{{ super() }}{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='sales_table_script.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+
+    <div class="row align-columns-center">
+        <div class="col-md-2 col-sm-1"></div>
+        <div class="col-md-8 col-sm-10">
+            <table class="table table-bordered" id="sales_table">
+                <thead>
+                    <tr>
+                        <th>show</th>
+                        <th>item</th>
+                        <th>num_sold</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                {% for sale in sales %}
+                    <tr>
+                        <td>{{ sale.show_id }}</td>
+{#                        <td>{{ sale.merch_id }}</td>#}
+                        <td>{{ sale.merch_name }}</td>
+                        <td>{{ sale.num_sold }}</td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+            <form class="form" action="{{ url_for('sales') }}" method=post>
+                <div class="form-group">
+                    <div class="btn-group special form-group" data-toggle="buttons">
+                        <label class="btn control-label">
+                            <input type="radio" name="actions" value="add" class="form-control act">enter_new_sales</label>
+                        <label class="btn control-label">
+                            <input type="radio" name="actions" value="upd" class="form-control act">edit_sales_record</label>
+                        <label class="btn control-label">
+                            <input type="radio" name="actions" value="del" class="form-control act">delete_sales_record</label>
+                    </div>
+                    <fieldset class="form-group">
+                        <div class="form-group row">
+                            <label for="select_show_id" class="col-4 col-form-label control-label">select_show</label>
+                            <div class="col-8">
+                                <select name="select_show_id" id="select_show_id" class="form-control">
+
+                                    {% for show in shows %}
+                                        <option>{{ show.show_date }} @ {{ show.show_venue }}</option>
+                                    {% endfor %}
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+
+                            {% for item in items %}
+
+                                <div class="col-lg-4 col-md-12">
+                                    <div class="form-group row">
+                                        <label for="{{ item['merch_id'] }}" class="col 6 col-form-label control-label">{{ item['merch_name'] }}</label>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" name="{{ item['merch_name'] }}" id="{{ item['merch_id'] }}">
+                                        </div>
+                                    </div>
+                                    <div class="form-group hidden">
+                                        <label for="orig_{{ item['merch_id'] }}" class="control-label">
+                                            <input class="form-control" name="orig_{{ item['merch_name'] }}" id="orig_{{ item['merch_id'] }}">
+                                        </label>
+                                    </div>
+                                </div>
+
+                            {% endfor %}
+
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-12">
+                                <button type="submit" class="btn" id="sales_submit">submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-2 col-sm-1"></div>
+    </div>
+
+    {% for message in get_flashed_messages() %}
+        <p class="flashed_message">{{ message }}</p>
+    {% endfor %}
+
+{% endblock %}
