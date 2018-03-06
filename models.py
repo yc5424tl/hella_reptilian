@@ -60,9 +60,9 @@ class Sales(db.Model):
     merch_name = db.Column(db.String, db.ForeignKey('merch.merch_name'), nullable=False)
     num_sold = db.Column(db.Integer, default=0, nullable=False)
 
-    rel_sale_show_id = db.relationship(Show, foreign_keys=show_id, backref='sale_show_id', lazy='dynamic')
-    rel_sale_merch_id = db.relationship(Merch, foreign_keys=merch_id, backref='sale_merch_id', lazy='dynamic')
-    rel_sale_merch_name = db.relationship(Merch, foreign_keys=merch_name, backref='sale_merch_name', lazy='dynamic')
+    show = db.relationship(Show, foreign_keys=show_id)
+    item_id = db.relationship(Merch, foreign_keys=merch_id)
+    item_name = db.relationship(Merch, foreign_keys=merch_name)
 
     def __init__(self, show_id, merch_id, merch_name, num_sold):
         self.show_id = show_id
