@@ -26,7 +26,7 @@ class Merch(db.Model):
     __tablename__ = 'merch'
 
     merch_id = db.Column(db.Integer, primary_key=True)
-    merch_name = db.Column(db.String, nullable=False)
+    merch_name = db.Column(db.String, nullable=False, unique=True)
     merch_cost = db.Column(db.Float, nullable=False)
     merch_descr = db.Column(db.VARCHAR, nullable=False)
 
