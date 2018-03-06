@@ -11,6 +11,8 @@ class Show(db.Model):
     show_date = db.Column(db.Date, nullable=False)
     show_venue = db.Column(db.String, nullable=False)
 
+    sales = db.relationship(Sales, backref='shows', passive_deletes=True)
+
 
     def __init__(self, date, venue):
         self.show_date = date
@@ -30,6 +32,8 @@ class Merch(db.Model):
     merch_cost = db.Column(db.Float, nullable=False)
     merch_descr = db.Column(db.VARCHAR, nullable=False)
 
+    sales = db.relationship(Sales, backref='merch', passive_deletes=True)
+
     def __init__(self, name, cost, descr):
         self.merch_name = name
         self.merch_cost = cost
@@ -46,12 +50,11 @@ class Sales(db.Model):
     __table_args__ = (UniqueConstraint('show_id', 'merch_id', 'merch_name', name='sales_table_unique_constraint_show-id_merch-id_merch-name'),)
 
     sales_id = db.Column(db.Integer, primary_key=True)
-    show_id = db.Column(db.Integer, db.ForeignKey('shows.show_id'), nullable=False)
-    merch_id = db.Column(db.Integer, db.ForeignKey('merch.merch_id'), nullable=False)
-    merch_name = db.Column(db.String, db.ForeignKey('merch.merch_name'), nullable=False)
+    show_id = db.Column(db.Integer, db.ForeignKey('shows.show_id', onupdate="CASCADE", ondelete="CASCADE", nullable=False))
+    merch_id = db.Column(db.Integer, db.ForeignKey('merch.merch_id', onupdate="CASCADE", nullable=False))
+    merch_name = db.Column(db.String, db.ForeignKey('merch.merch_name', onupdate="CASCADE", nullable=False))
     num_sold = db.Column(db.Integer, default=0, nullable=False)
 
-    # rel_sales_merch = db.relationship('Merch', backref='sales')
 
     def __init__(self, show_id, merch_id, merch_name, num_sold):
         self.show_id = show_id
