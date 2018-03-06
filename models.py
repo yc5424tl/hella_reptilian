@@ -1,4 +1,4 @@
-from sqlalchemy import UniqueConstraint, ForeignKeyConstraint
+from sqlalchemy import UniqueConstraint
 
 from manage import db
 
@@ -60,7 +60,6 @@ class Sales(db.Model):
     #show_id = db.Column(db.Integer, db.ForeignKey('shows.show_id'), nullable=False)
     # merch_id = db.Column(db.Integer, db.ForeignKey('merch.merch_id'), nullable=False)
 
-
     __tablename__ = 'sales'
     __table_args__ = (UniqueConstraint('show_id', 'merch_name', name='unique_show_merch'),)
     sale_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
@@ -68,8 +67,9 @@ class Sales(db.Model):
     merch_name = db.Column(db.String, db.ForeignKey('merch.merch_name'), nullable=False)
     num_sold = db.Column(db.Integer, default=0, nullable=False)
 
-    def __init__(self, show_id, merch_name, num_sold):
+    def __init__(self, show_id, merch_id, merch_name, num_sold):
         self.show_id = show_id
+        self.merch_id = merch_id
         self.merch_name = merch_name
         self.num_sold = num_sold
 
