@@ -1,7 +1,5 @@
 from sqlalchemy import UniqueConstraint
-
-
-from manage import db, app
+from manage import db
 
 
 class Show(db.Model):
@@ -11,10 +9,8 @@ class Show(db.Model):
     show_id = db.Column(db.Integer, primary_key=True)
     show_date = db.Column(db.Date, nullable=False)
     show_venue = db.Column(db.String, nullable=False)
-
     # sales = db.relationship('sales', backref='shows', passive_deletes=True)
     # sales = db.relationship("Sales", cascade="save-update, merge, delete")
-
     def __init__(self, date, venue):
         self.show_date = date
         self.show_venue = venue
