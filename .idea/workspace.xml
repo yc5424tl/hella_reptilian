@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ce63eb6-5df8-445e-96ec-87dd3a2eaed3" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/migrations/README" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/migrations/alembic.ini" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/migrations/env.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/migrations/script.py.mako" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/migrations/versions/a32f90ae103c_.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models.py" afterPath="$PROJECT_DIR$/models.py" />
     </list>
     <ignored mask="*.xml" />
@@ -53,8 +58,8 @@
           <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="42" column="30" lean-forward="true" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+                <state relative-caret-position="232">
+                  <caret line="43" column="32" lean-forward="true" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
                     <element signature="e#3353#3443#0" expanded="true" />
@@ -324,7 +329,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1916" y="-4" width="1928" height="1088" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="ReactNative" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -333,7 +337,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.123958334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JSON Utils" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -441,17 +445,17 @@
         <state relative-caret-position="-3710">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1520371273497" expanded="true" signature="33041:33058" ph="..." />
-            <marker date="1520371273497" expanded="true" signature="33041:33076" ph="..." />
-            <marker date="1520371273497" expanded="true" signature="33041:33089" ph="..." />
-            <marker date="1520371273497" expanded="true" signature="33041:33104" ph="..." />
-            <marker date="1520371273497" expanded="true" signature="33139:33494" ph="..." />
-            <marker date="1520371273497" expanded="true" signature="33152:33479" ph="..." />
-            <marker date="1520371273497" expanded="true" signature="33200:33465" ph="..." />
-            <marker date="1520371273497" expanded="true" signature="33219:33450" ph="..." />
-            <marker date="1520371273497" expanded="true" signature="33252:33430" ph="..." />
-            <marker date="1520371273497" expanded="true" signature="33292:33396" ph="..." />
-            <marker date="1520371273497" expanded="true" signature="33313:33374" ph="..." />
+            <marker date="1520371324116" expanded="true" signature="33039:33056" ph="..." />
+            <marker date="1520371324116" expanded="true" signature="33039:33074" ph="..." />
+            <marker date="1520371324116" expanded="true" signature="33039:33087" ph="..." />
+            <marker date="1520371324116" expanded="true" signature="33039:33102" ph="..." />
+            <marker date="1520371324116" expanded="true" signature="33137:33492" ph="..." />
+            <marker date="1520371324116" expanded="true" signature="33150:33477" ph="..." />
+            <marker date="1520371324116" expanded="true" signature="33198:33463" ph="..." />
+            <marker date="1520371324116" expanded="true" signature="33217:33448" ph="..." />
+            <marker date="1520371324116" expanded="true" signature="33250:33428" ph="..." />
+            <marker date="1520371324116" expanded="true" signature="33290:33394" ph="..." />
+            <marker date="1520371324116" expanded="true" signature="33311:33372" ph="..." />
           </folding>
         </state>
       </provider>
@@ -595,8 +599,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="42" column="30" lean-forward="true" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+        <state relative-caret-position="232">
+          <caret line="43" column="32" lean-forward="true" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <element signature="e#3353#3443#0" expanded="true" />
