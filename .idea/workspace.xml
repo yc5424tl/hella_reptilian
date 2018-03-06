@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1ce63eb6-5df8-445e-96ec-87dd3a2eaed3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models.py" afterPath="$PROJECT_DIR$/models.py" />
     </list>
     <ignored mask="*.xml" />
     <ignored mask="*.pyc" />
@@ -59,11 +60,10 @@
           <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-206">
-                  <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+                <state relative-caret-position="-77">
+                  <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
                   <folding>
-                    <element signature="e#0#39#0" expanded="true" />
-                    <element signature="e#1741#1862#0" expanded="true" />
+                    <element signature="e#1708#1829#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -293,7 +293,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1916" y="-4" width="1928" height="1088" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="ReactNative" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -302,7 +301,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.123958334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JSON Utils" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -418,17 +417,17 @@
         <state relative-caret-position="-3710">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1520313240362" expanded="true" signature="30273:30290" ph="..." />
-            <marker date="1520313240362" expanded="true" signature="30273:30308" ph="..." />
-            <marker date="1520313240362" expanded="true" signature="30273:30321" ph="..." />
-            <marker date="1520313240362" expanded="true" signature="30273:30336" ph="..." />
-            <marker date="1520313240362" expanded="true" signature="30371:30726" ph="..." />
-            <marker date="1520313240362" expanded="true" signature="30384:30711" ph="..." />
-            <marker date="1520313240362" expanded="true" signature="30432:30697" ph="..." />
-            <marker date="1520313240362" expanded="true" signature="30451:30682" ph="..." />
-            <marker date="1520313240362" expanded="true" signature="30484:30662" ph="..." />
-            <marker date="1520313240362" expanded="true" signature="30524:30628" ph="..." />
-            <marker date="1520313240362" expanded="true" signature="30545:30606" ph="..." />
+            <marker date="1520313278225" expanded="true" signature="30275:30292" ph="..." />
+            <marker date="1520313278225" expanded="true" signature="30275:30310" ph="..." />
+            <marker date="1520313278225" expanded="true" signature="30275:30323" ph="..." />
+            <marker date="1520313278225" expanded="true" signature="30275:30338" ph="..." />
+            <marker date="1520313278225" expanded="true" signature="30373:30728" ph="..." />
+            <marker date="1520313278225" expanded="true" signature="30386:30713" ph="..." />
+            <marker date="1520313278225" expanded="true" signature="30434:30699" ph="..." />
+            <marker date="1520313278225" expanded="true" signature="30453:30684" ph="..." />
+            <marker date="1520313278225" expanded="true" signature="30486:30664" ph="..." />
+            <marker date="1520313278225" expanded="true" signature="30526:30630" ph="..." />
+            <marker date="1520313278225" expanded="true" signature="30547:30608" ph="..." />
           </folding>
         </state>
       </provider>
@@ -547,11 +546,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-206">
-          <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="46" selection-end-line="22" selection-end-column="46" />
+        <state relative-caret-position="-77">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#1741#1862#0" expanded="true" />
+            <element signature="e#1708#1829#0" expanded="true" />
           </folding>
         </state>
       </provider>
