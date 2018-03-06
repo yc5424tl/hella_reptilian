@@ -38,6 +38,7 @@ class SalesManager(object):
         db.session.commit()
 
 
+
     @staticmethod
     def get_post_merch_record(m_name, m_cost, m_descr):
 

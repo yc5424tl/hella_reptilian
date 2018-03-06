@@ -52,7 +52,7 @@
                                 <select name="select_show_id" id="select_show_id" class="form-control">
 
                                     {% for show in shows %}
-                                        <option>{{ show.show_date }} @ {{ show.show_venue }}</option>
+                                        <option value="{{ show.show_id }}">{{ show.show_date }} @ {{ show.show_venue }}</option>
                                     {% endfor %}
 
                                 </select>

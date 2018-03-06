@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1ce63eb6-5df8-445e-96ec-87dd3a2eaed3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/layout.html" afterPath="$PROJECT_DIR$/templates/layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/tour_dates.html" afterPath="$PROJECT_DIR$/templates/tour_dates.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/salesManager.py" afterPath="$PROJECT_DIR$/salesManager.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/sales.html" afterPath="$PROJECT_DIR$/templates/sales.html" />
     </list>
     <ignored mask="*.xml" />
     <ignored mask="*.pyc" />
@@ -26,70 +26,8 @@
     <splitter split-orientation="horizontal" split-proportion="0.8198573">
       <split-first>
         <leaf>
-          <file leaf-file-name="Procfile" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Procfile">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="view_router.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/view_router.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="showManager.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/showManager.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#29#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="tour_dates.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/tour_dates.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="19">
-                  <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="layout_style.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/static/layout_style.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/home.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="layout.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/templates/layout.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-576">
                   <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -98,24 +36,48 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="hella_reptilian.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/hella_reptilian.py">
+          <file leaf-file-name="sales.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/templates/sales.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-3024">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state relative-caret-position="402">
+                  <caret line="54" column="50" lean-forward="false" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/models.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="379">
+                  <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
                   <folding>
-                    <element signature="e#0#9#0" expanded="true" />
+                    <element signature="e#0#39#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="sales.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/sales.html">
+          <file leaf-file-name="salesManager.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/salesManager.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
+                <state relative-caret-position="357">
+                  <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#287#317#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="showManager.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/showManager.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-1152">
                   <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
+                  <folding>
+                    <element signature="e#0#29#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -169,9 +131,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/view_router.py" />
-        <option value="$PROJECT_DIR$/salesManager.py" />
         <option value="$PROJECT_DIR$/showManager.py" />
-        <option value="$PROJECT_DIR$/templates/sales.html" />
         <option value="$PROJECT_DIR$/templates/merch_table.html" />
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/manage.py" />
@@ -180,6 +140,8 @@
         <option value="$PROJECT_DIR$/hella_reptilian.py" />
         <option value="$PROJECT_DIR$/templates/tour_dates.html" />
         <option value="$PROJECT_DIR$/templates/layout.html" />
+        <option value="$PROJECT_DIR$/salesManager.py" />
+        <option value="$PROJECT_DIR$/templates/sales.html" />
       </list>
     </option>
   </component>
@@ -368,14 +330,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/salesManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -464,17 +418,17 @@
         <state relative-caret-position="-3710">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1520296717062" expanded="true" signature="31325:31342" ph="..." />
-            <marker date="1520296717062" expanded="true" signature="31325:31360" ph="..." />
-            <marker date="1520296717062" expanded="true" signature="31325:31373" ph="..." />
-            <marker date="1520296717062" expanded="true" signature="31325:31388" ph="..." />
-            <marker date="1520296717062" expanded="true" signature="31423:31778" ph="..." />
-            <marker date="1520296717062" expanded="true" signature="31436:31763" ph="..." />
-            <marker date="1520296717062" expanded="true" signature="31484:31749" ph="..." />
-            <marker date="1520296717062" expanded="true" signature="31503:31734" ph="..." />
-            <marker date="1520296717062" expanded="true" signature="31536:31714" ph="..." />
-            <marker date="1520296717062" expanded="true" signature="31576:31680" ph="..." />
-            <marker date="1520296717062" expanded="true" signature="31597:31658" ph="..." />
+            <marker date="1520300076870" expanded="true" signature="30215:30232" ph="..." />
+            <marker date="1520300076870" expanded="true" signature="30215:30250" ph="..." />
+            <marker date="1520300076870" expanded="true" signature="30215:30263" ph="..." />
+            <marker date="1520300076870" expanded="true" signature="30215:30278" ph="..." />
+            <marker date="1520300076870" expanded="true" signature="30313:30668" ph="..." />
+            <marker date="1520300076870" expanded="true" signature="30326:30653" ph="..." />
+            <marker date="1520300076870" expanded="true" signature="30374:30639" ph="..." />
+            <marker date="1520300076870" expanded="true" signature="30393:30624" ph="..." />
+            <marker date="1520300076870" expanded="true" signature="30426:30604" ph="..." />
+            <marker date="1520300076870" expanded="true" signature="30466:30570" ph="..." />
+            <marker date="1520300076870" expanded="true" signature="30487:30548" ph="..." />
           </folding>
         </state>
       </provider>
@@ -497,16 +451,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -523,16 +467,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/showManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hella_reptilian.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3024">
@@ -540,30 +474,6 @@
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/sales.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/merch_table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/tour_dates.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -585,8 +495,62 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/layout.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="59" column="27" lean-forward="true" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/tour_dates.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-576">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/merch_table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/showManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1152">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/salesManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="e#287#317#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/sales.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="54" column="50" lean-forward="false" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
           <folding />
         </state>
       </provider>
