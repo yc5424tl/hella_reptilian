@@ -1,79 +1,88 @@
 {% extends "layout.html" %}
 
+{% block title %}tour_dates{% endblock %}
+
+{% block header %}{{ super() }}{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='tour_dates_script.js') }}"></script>
+{% endblock %}
+
 {% block content %}
 
-    <div id="home-page-div">
-        <div class="row" id="bandcamp-sidebar-row-div">
-            <div class="col-lg-9 col-md-7 col-sm-12">
-                <div id="carousel-div" class="carousel slide ps-top-to-bottom" data-ride="carousel">
-                    <ul class="carousel-indicators">
-                        <li data-target="#carousel-div" data-slide-to="0" class="active"></li>
-                        <li data-target="#carasoul-div" data-slide-to="1"></li>
-                        <li data-target="#carasoul-div" data-slide-to="2"></li>
-                        <li data-target="#carasoul-div" data-slide-to="3"></li>
-                        <li data-target="#carasoul-div" data-slide-to="4"></li>
-                    </ul>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="img-fluid" src="{{ url_for('static', filename="img/carousel/car1.jpg") }}">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="img-fluid" src="{{ url_for('static', filename="img/carousel/car2.jpeg") }}">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="img-fluid" src="{{ url_for('static', filename="img/carousel/car3.jpg") }}">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="img-fluid" src="{{ url_for('static', filename="img/carousel/car4.jpg") }}">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="img-fluid" src="{{ url_for('static', filename="img/carousel/car5.jpg") }}">
-                        </div>
+    <div class="row align-columns center">
+        <div class="col-md-2 com-sm-1"></div>
+        <div class="col-md-8 col-sm-10">
+            <table class="table table-bordered" id="tour_dates_table">
+                <thead>
+                    <tr>
+                        <th>date</th>
+                        <th>venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {% for show in shows %}
+                        <tr>
+                            <td>{{ show.show_date }}</td>
+                            <td>{{ show.show_venue }}</td>
+                        </tr>
+                    {% endfor %}
+
+                </tbody>
+            </table>
+            <form class="form" action="{{ url_for('tour_dates') }}" method="post">
+                <div class="form-group">
+                    <div class="btn-group special form-group" data-toggle="buttons">
+                        <label class="btn control-label">
+                            <input type="radio" name="actions" value="add" class="form-control act">add_show</label>
+                        <label class="btn control-label">
+                            <input type="radio" name="actions" value="upd" class="form-control act">modify</label>
+                        <label class="btn control-label">
+                            <input type="radio" name="actions" value="del" class="form-control act">cancel</label>
                     </div>
-                    <a class="carousel-control-prev" href="#carousel-div" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#carousel-div" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </a>
+                    <fieldset class="form-group">
+                        <div class="form-group row">
+                            <div class="col-lg-4 col-md-12">
+                                <div class="form-group row">
+                                    <label class="col-6 col-form-label control-label" for="show_date_input">show_date</label>
+                                    <div class="col-6">
+                                        <input type="date" id="show_date_input" name="show_date" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <div class="form-group row">
+                                    <label class="col-6 col-form-label control-label" for="show_venue_input">show_venue</label>
+                                    <div class="col-6">
+                                        <input type="text" id="show_venue_input" name="show_venue" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <button type="submit" class="btn" id="tour_submit">press_record</button>
+                            </div>
+                            <div class="form-group hidden">
+                                <label class="control-label" for="show_orig_date"></label>
+                                <input type="date" id="show_orig_date" name="show_orig_date" class="form-control">
+                            </div>
+                            <div class="form-group hidden">
+                                <label class="control-label" for="show_orig_venue"></label>
+                                <input type="text" id="show_orig_venue" name="show_orig_venue" class="form-control">
+                            </div>
+                        </div>
+                    </fieldset>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-5 col-sm-12" id="bandcamp-sidebar">
-                  <div class="row">
-                    <div id="bandcamp-div-payphone" class="col-12">
-                        <iframe class='bc-player' style="border: 0; width: 350px; height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=1699322700/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" seamless>
-                            <a href="http://hellareptilian.bandcamp.com/track/shiny-new-payphone">shiny new payphone by Hella Reptilian!</a>
-                        </iframe>
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div id="bandcamp-div-soho" class="col-12">
-                        <iframe class='bc-player' style="border: 0; width: 350px; height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=1970933340/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless>
-                            <a href="http://hellareptilian.bandcamp.com/track/sohodo">SoHoDo by Hella Reptilian!</a>
-                        </iframe>
-                    </div>
-                </div>
-
-
-{#                <div class="row" id="bandcamp-sidebar-inner">#}
-{#                    <div class="col-lg-12 col-md-12 col-sm-6 bc-div">#}
-{#                        <iframe class='bc-player' style="border: 0; width: 350px; height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=1699322700/size=large/bgcol=333333/linkcol=0f91ff/tracklist=false/transparent=true/" seamless>#}
-{#                            <a href="http://hellareptilian.bandcamp.com/track/shiny-new-payphone">shiny new payphone by Hella Reptilian!</a>#}
-{#                        </iframe>#}
-{#                    </div>#}
-{#                    <div class="col-lg-12 col-md-12 col-sm-6 bc-div">#}
-{#                        <iframe class='bc-player' style="border: 0; width: 350px; height: 442px;" src="https://bandcamp.com/EmbeddedPlayer/track=1970933340/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless>#}
-{#                            <a href="http://hellareptilian.bandcamp.com/track/sohodo">SoHoDo by Hella Reptilian!</a>#}
-{#                        </iframe>#}
-{#                    </div>#}
-{#                </div>#}
-            </div>
+            </form>
         </div>
-        <div class="row">
-            <div class="col-12"></div>
-        </div>
+        <div class="col-md-2 col-sm-1"></div>
     </div>
+
+    {# https://stackoverflow.com/a/38796378 #}
+
+    {% for message in get_flashed_messages() %}
+        <p class="flashed_message">{{ message }}</p>
+    {% endfor %}
 
 {% endblock %}
