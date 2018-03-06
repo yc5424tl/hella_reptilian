@@ -66,6 +66,10 @@ def merch_table():
                 abort(500)
 
             record = get_post_merch_record(orig_merch_name, orig_merch_cost, orig_merch_descr)
+            sales = get_merch_sale_records(orig_merch_name)
+
+            for sale in sales:
+                sale.merch_name = f_merch_name
 
             record.merch_name = f_merch_name
             record.merch_cost = f_merch_cost
@@ -321,6 +325,9 @@ def get_post_merch_record(m_name, m_cost, m_descr):
     return record
 
 
+def get_merch_sale_records(m_name):
+    sales = Sales.query.filter_by(merch_name=m_name)
+    return sales
 
 if __name__ == '__main__':
     app.jinja_env.auto_reload = True
