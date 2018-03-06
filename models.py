@@ -63,9 +63,9 @@ class Sales(db.Model):
     merch_name = db.Column(db.String, db.ForeignKey('merch.merch_name'), nullable=False)
     num_sold = db.Column(db.Integer, default=0, nullable=False)
 
-    rel_show_id = db.relationship("Show", back_populates="rel_sales")
-    rel_merch_id = db.relationship("Merch", back_populates="rel_sales_id")
-    rel_merch_name = db.relationship("Merch", back_populates="rel_sales_name")
+    rel_show_id = db.relationship("Show", foreign_keys=show_id, back_populates="rel_sales")
+    rel_merch_id = db.relationship("Merch", foreign_keys=merch_id, back_populates="rel_sales_id")
+    rel_merch_name = db.relationship("Merch", foreign_keys=merch_name, back_populates="rel_sales_name")
 
     # show = db.relationship(Show, foreign_keys=show_id)
     # item_id = db.relationship(Merch, foreign_keys=merch_id)
