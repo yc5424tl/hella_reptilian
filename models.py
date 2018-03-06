@@ -11,7 +11,7 @@ class Show(db.Model):
     show_date = db.Column(db.Date, nullable=False)
     show_venue = db.Column(db.String, nullable=False)
 
-    sales = db.relationship(Sales, backref='shows', passive_deletes=True)
+    sales = db.relationship('sales', backref='shows', passive_deletes=True)
 
 
     def __init__(self, date, venue):
@@ -32,7 +32,7 @@ class Merch(db.Model):
     merch_cost = db.Column(db.Float, nullable=False)
     merch_descr = db.Column(db.VARCHAR, nullable=False)
 
-    sales = db.relationship(Sales, backref='merch', passive_deletes=True)
+    sales = db.relationship('sales', backref='merch', passive_deletes=True)
 
     def __init__(self, name, cost, descr):
         self.merch_name = name
