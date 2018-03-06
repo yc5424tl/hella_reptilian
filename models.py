@@ -1,4 +1,5 @@
-from sqlalchemy import UniqueConstraint
+from sqlalchemy import UniqueConstraint, ForeignKeyConstraint
+
 from manage import db
 
 
@@ -51,9 +52,9 @@ class Sales(db.Model):
     # show_id = db.Column(db.Integer, db.ForeignKey('shows.show_id', onupdate="CASCADE", ondelete="CASCADE", nullable=False))
     # merch_id = db.Column(db.Integer, db.ForeignKey('merch.merch_id', onupdate="CASCADE", nullable=False))
     # merch_name = db.Column(db.String, db.ForeignKey('merch.merch_name', onupdate="CASCADE", nullable=False))
-    show_id = db.Column(db.Integer, db.ForeignKey('shows.show_id'), nullable=False)
-    merch_id = db.Column(db.Integer, db.ForeignKey('merch.merch_id'), nullable=False)
-    merch_name = db.Column(db.String, db.ForeignKey('merch.merch_name'), nullable=False)
+    show_id = db.Column(db.Integer, db.ForeignKey('shows.show_id', onupdate="CASCADE", ondelete="CASCADE"), nullable=False)
+    merch_id = db.Column(db.Integer, db.ForeignKey('merch.merch_id', onupdate="CASCADE", ondelete="CASCADE"), nullable=False)
+    merch_name = db.Column(db.String, db.ForeignKey('merch.merch_name', onupdate="CASCADE", ondelete="CASCADE"), nullable=False)
     num_sold = db.Column(db.Integer, default=0, nullable=False)
 
     show = db.relationship(Show, foreign_keys=show_id)
