@@ -33,8 +33,8 @@ class Merch(db.Model):
     merch_cost = db.Column(db.Float, nullable=False)
     merch_descr = db.Column(db.VARCHAR, nullable=False)
 
-    rel_sales_id = db.relationship(db.Sales.merch_id, back_populates="rel_merch_id")
-    rel_sales_name = db.relationship(db.Sales.merch_name, back_populates="rel_merch_name")
+    rel_sales_id = db.relationship("sales.merch_id", back_populates="rel_merch_id")
+    rel_sales_name = db.relationship("sales.merch_name", back_populates="rel_merch_name")
     #
     # sales = db.relationship('Sales', cascade="save-update, merge, delete")
     # sales = db.relationship('sales', backref='merch', passive_deletes=True)
