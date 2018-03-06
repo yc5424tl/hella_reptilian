@@ -63,8 +63,8 @@ class Sales(db.Model):
     __tablename__ = 'sales'
     __table_args__ = (UniqueConstraint('show_id', 'merch_name', name='unique_show_merch'),)
     sale_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    show_id = db.Column(db.Integer, db.ForeignKey('shows.show_id'), nullable=False)
-    merch_name = db.Column(db.String, db.ForeignKey('merch.merch_name'), nullable=False)
+    show_id = db.Column(db.Integer, db.ForeignKey('shows.show_id', onupdate='CASCADE', ondelete='CASCADE'), nullable=False)
+    merch_name = db.Column(db.String, db.ForeignKey('merch.merch_name', onupdate='CASCADE', ondelete='CASCADE'), nullable=False)
     num_sold = db.Column(db.Integer, default=0, nullable=False)
 
     def __init__(self, show_id, merch_id, merch_name, num_sold):
