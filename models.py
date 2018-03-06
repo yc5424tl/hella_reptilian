@@ -10,6 +10,9 @@ class Show(db.Model):
     show_id = db.Column(db.Integer, primary_key=True)
     show_date = db.Column(db.Date, nullable=False)
     show_venue = db.Column(db.String, nullable=False)
+
+    rel_sales = db.relationship("Sales", back_populates="rel_show_id")
+
     # sales = db.relationship('sales', backref='shows', passive_deletes=True)
     # sales = db.relationship("Sales", cascade="save-update, merge, delete")
     def __init__(self, date, venue):
@@ -29,6 +32,9 @@ class Merch(db.Model):
     merch_name = db.Column(db.String, nullable=False, unique=True)
     merch_cost = db.Column(db.Float, nullable=False)
     merch_descr = db.Column(db.VARCHAR, nullable=False)
+
+    rel_sales_id = db.relationship("Sales", back_populates="rel_merch_id")
+    rel_sales_name = db.relationship("Sales", back_populates="rel_merch_name")
     #
     # sales = db.relationship('Sales', cascade="save-update, merge, delete")
     # sales = db.relationship('sales', backref='merch', passive_deletes=True)
@@ -46,20 +52,26 @@ class Merch(db.Model):
 class Sales(db.Model):
 
     __tablename__ = 'sales'
-    __table_args__ = (UniqueConstraint('show_id', 'merch_id', 'merch_name', name='sales_table_unique_constraint_show-id_merch-id_merch-name'),)
+    # __table_args__ = (UniqueConstraint('show_id', 'merch_id', 'merch_name', name='sales_table_unique_constraint_show-id_merch-id_merch-name'),)
 
     sales_id = db.Column(db.Integer, primary_key=True)
     # show_id = db.Column(db.Integer, db.ForeignKey('shows.show_id', onupdate="CASCADE", ondelete="CASCADE", nullable=False))
     # merch_id = db.Column(db.Integer, db.ForeignKey('merch.merch_id', onupdate="CASCADE", nullable=False))
     # merch_name = db.Column(db.String, db.ForeignKey('merch.merch_name', onupdate="CASCADE", nullable=False))
-    show_id = db.Column(db.Integer, db.ForeignKey('shows.show_id', onupdate="CASCADE", ondelete="CASCADE"), nullable=False)
-    merch_id = db.Column(db.Integer, db.ForeignKey('merch.merch_id', onupdate="CASCADE", ondelete="CASCADE"), nullable=False)
-    merch_name = db.Column(db.String, db.ForeignKey('merch.merch_name', onupdate="CASCADE", ondelete="CASCADE"), nullable=False)
+    show_id = db.Column(db.Integer, db.ForeignKey('shows.show_id'), nullable=False)
+    merch_id = db.Column(db.Integer, db.ForeignKey('merch.merch_id'), nullable=False)
+    merch_name = db.Column(db.String, db.ForeignKey('merch.merch_name'), nullable=False)
     num_sold = db.Column(db.Integer, default=0, nullable=False)
 
-    show = db.relationship(Show, foreign_keys=show_id)
-    item_id = db.relationship(Merch, foreign_keys=merch_id)
-    item_name = db.relationship(Merch, foreign_keys=merch_name)
+    rel_show_id = db.relationship("Show", back_populates="rel_sales")
+    rel_merch_id = db.relationship("Merch", back_populates="rel_sales_id")
+    rel_merch_name = db.relationship("Merch", back_populates="rel_sales_name")
+
+    # show = db.relationship(Show, foreign_keys=show_id)
+    # item_id = db.relationship(Merch, foreign_keys=merch_id)
+    # item_name = db.relationship(Merch, foreign_keys=merch_name)
+
+
 
     def __init__(self, show_id, merch_id, merch_name, num_sold):
         self.show_id = show_id
