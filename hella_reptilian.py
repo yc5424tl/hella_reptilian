@@ -161,7 +161,8 @@ class SalesReportView(MethodView):
 
         shows_data = db.session.query(Show).all()
         items_data = db.session.query(Merch).all()
-        sales_data = db.session.query(Sales.show_id, Sales.merch_id, Sales.merch_name, Sales.num_sold).order_by(Sales.show_id)
+        # sales_data = db.session.query(Sales.show_id, Sales.merch_id, Sales.merch_name, Sales.num_sold).order_by(Sales.show_id)
+        sales_data = db.session.query(Sales.show_id, Sales.merch_name, Sales.num_sold).order_by(Sales.show_id)
 
         return render_template(self.template_name, sales=sales_data, shows=shows_data, items=items_data,  active='sales')
 
