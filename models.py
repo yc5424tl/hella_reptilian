@@ -13,7 +13,7 @@ class Show(db.Model):
     show_date = db.Column(db.Date, nullable=False)
     show_venue = db.Column(db.String, nullable=False)
 
-    rel_sales = db.relationship("sales", back_populates="rel_show_id")
+    rel_sales = db.relationship("Sales", back_populates="rel_show_id")
 
     # sales = db.relationship('sales', backref='shows', passive_deletes=True)
     # sales = db.relationship("Sales", cascade="save-update, merge, delete")
@@ -35,8 +35,8 @@ class Merch(db.Model):
     merch_cost = db.Column(db.Float, nullable=False)
     merch_descr = db.Column(db.VARCHAR, nullable=False)
 
-    rel_sales_id = db.relationship("sales.merch_id", back_populates="rel_merch_id")
-    rel_sales_name = db.relationship("sales.merch_name", back_populates="rel_merch_name")
+    rel_sales_id = db.relationship("Sales.merch_id", back_populates="rel_merch_id")
+    rel_sales_name = db.relationship("Sales.merch_name", back_populates="rel_merch_name")
     #
     # sales = db.relationship('Sales', cascade="save-update, merge, delete")
     # sales = db.relationship('sales', backref='merch', passive_deletes=True)
@@ -65,9 +65,9 @@ class Sales(db.Model):
     merch_name = db.Column(db.String, db.ForeignKey('merch.merch_name'), nullable=False)
     num_sold = db.Column(db.Integer, default=0, nullable=False)
 
-    rel_show_id = db.relationship("sales", foreign_keys=show_id, back_populates="rel_sales")
-    rel_merch_id = db.relationship("merch", foreign_keys=merch_id, back_populates="rel_sales_id")
-    rel_merch_name = db.relationship("merch", foreign_keys=merch_name, back_populates="rel_sales_name")
+    rel_show_id = db.relationship("Sales", foreign_keys=show_id, back_populates="rel_sales")
+    rel_merch_id = db.relationship("Merch", foreign_keys=merch_id, back_populates="rel_sales_id")
+    rel_merch_name = db.relationship("Merch", foreign_keys=merch_name, back_populates="rel_sales_name")
 
     # show = db.relationship(Show, foreign_keys=show_id)
     # item_id = db.relationship(Merch, foreign_keys=merch_id)
