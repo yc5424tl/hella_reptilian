@@ -63,11 +63,11 @@
           <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="362">
-                  <caret line="67" column="60" lean-forward="true" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="60" />
+                <state relative-caret-position="376">
+                  <caret line="72" column="36" lean-forward="true" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
                   <folding>
                     <element signature="e#0#61#0" expanded="true" />
-                    <element signature="e#2948#3000#0" expanded="true" />
+                    <element signature="e#3253#3343#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -246,17 +246,6 @@
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="hella_reptilian" type="cbb8eebc:String" user="hella_reptilian" />
             </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="hella_reptilian" type="cbb8eebc:String" user="hella_reptilian" />
-              <item name=".idea" type="cbb8eebc:String" user=".idea" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="hella_reptilian" type="cbb8eebc:String" user="hella_reptilian" />
-              <item name=".idea" type="cbb8eebc:String" user=".idea" />
-              <item name="dictionaries" type="cbb8eebc:String" user="dictionaries" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -323,8 +312,8 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.123958334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.123958334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JSON Utils" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -439,17 +428,17 @@
         <state relative-caret-position="-3710">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1520339743500" expanded="true" signature="31811:31828" ph="..." />
-            <marker date="1520339743500" expanded="true" signature="31811:31846" ph="..." />
-            <marker date="1520339743500" expanded="true" signature="31811:31859" ph="..." />
-            <marker date="1520339743500" expanded="true" signature="31811:31874" ph="..." />
-            <marker date="1520339743500" expanded="true" signature="31909:32264" ph="..." />
-            <marker date="1520339743500" expanded="true" signature="31922:32249" ph="..." />
-            <marker date="1520339743500" expanded="true" signature="31970:32235" ph="..." />
-            <marker date="1520339743500" expanded="true" signature="31989:32220" ph="..." />
-            <marker date="1520339743500" expanded="true" signature="32022:32200" ph="..." />
-            <marker date="1520339743500" expanded="true" signature="32062:32166" ph="..." />
-            <marker date="1520339743500" expanded="true" signature="32083:32144" ph="..." />
+            <marker date="1520368299386" expanded="true" signature="32262:32279" ph="..." />
+            <marker date="1520368299386" expanded="true" signature="32262:32297" ph="..." />
+            <marker date="1520368299386" expanded="true" signature="32262:32310" ph="..." />
+            <marker date="1520368299386" expanded="true" signature="32262:32325" ph="..." />
+            <marker date="1520368299386" expanded="true" signature="32360:32715" ph="..." />
+            <marker date="1520368299386" expanded="true" signature="32373:32700" ph="..." />
+            <marker date="1520368299386" expanded="true" signature="32421:32686" ph="..." />
+            <marker date="1520368299386" expanded="true" signature="32440:32671" ph="..." />
+            <marker date="1520368299386" expanded="true" signature="32473:32651" ph="..." />
+            <marker date="1520368299386" expanded="true" signature="32513:32617" ph="..." />
+            <marker date="1520368299386" expanded="true" signature="32534:32595" ph="..." />
           </folding>
         </state>
       </provider>
@@ -569,11 +558,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="67" column="60" lean-forward="true" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="60" />
+        <state relative-caret-position="376">
+          <caret line="72" column="36" lean-forward="true" selection-start-line="72" selection-start-column="36" selection-end-line="72" selection-end-column="36" />
           <folding>
             <element signature="e#0#61#0" expanded="true" />
-            <element signature="e#2948#3000#0" expanded="true" />
+            <element signature="e#3253#3343#0" expanded="true" />
           </folding>
         </state>
       </provider>
